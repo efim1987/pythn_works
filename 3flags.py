@@ -1,0 +1,27 @@
+import turtle
+def russian_flag(color, widht, height):
+    turtle.begin_fill()
+    turtle.color(color)
+    for _ in range(2):
+        turtle.forward(widht)
+        turtle.right(90)
+        turtle.forward(height)
+        turtle.right(90)
+    turtle.end_fill()
+def draw_flag():
+    turtle.speed(0)
+    turtle.penup()
+    turtle.goto(-200, 100)
+    turtle.pendown()
+    russian_flag("blue", 600, 100)
+    turtle.penup()
+    turtle.goto(-200, -100)
+    turtle.pendown()
+    russian_flag("white", 600, 100)
+    turtle.penup()
+    turtle.goto(-200, -100)
+    turtle.pendown()
+    russian_flag("red", 600, 100)
+    turtle.done()
+turtle.bgcolor("green")
+draw_flag()

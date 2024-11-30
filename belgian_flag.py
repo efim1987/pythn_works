@@ -1,0 +1,40 @@
+import turtle
+def draw_flag():
+    turtle.speed(0)
+    turtle.penup()
+    turtle.goto(-25, 150)
+    turtle.pendown()
+
+    turtle.begin_fill()
+    turtle.color("black")
+    for _ in range(2):
+        turtle.forward(150)
+        turtle.right(90)
+        turtle.forward(150)
+        turtle.right(90)
+    turtle.end_fill()
+
+    turtle.penup()
+    turtle.goto(-25, 0)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.color("yellow")
+    for _ in range(2):
+        turtle.forward(150)
+        turtle.right(90)
+        turtle.forward(150)
+        turtle.right(90)
+    turtle.end_fill()
+    turtle.penup()
+    turtle.goto(-25, -150)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.color("red")
+    for _ in range(2):
+        turtle.forward(150)
+        turtle.right(90)
+        turtle.forward(150)
+        turtle.right(90)
+    turtle.end_fill()
+    turtle.done()
+draw_flag()

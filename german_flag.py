@@ -1,0 +1,26 @@
+import turtle
+def rectangles(color, widht, height):
+    turtle.begin_fill()
+    turtle.color(color)
+    for _ in range(2):
+        turtle.forward(widht)
+        turtle.right(90)
+        turtle.forward(height)
+        turtle.right(90)
+    turtle.end_fill()
+def draw_flag():
+    turtle.speed(0)
+    turtle.penup()
+    turtle.goto(-200, 100)
+    turtle.pendown()
+    rectangles("black", 600, 100)
+    turtle.penup()
+    turtle.goto(-200, 0)
+    turtle.pendown()
+    rectangles("red", 600, 100)
+    turtle.penup()
+    turtle.goto(-200, -100)
+    turtle.pendown()
+    rectangles("yellow", 600, 100)
+    turtle.done()
+draw_flag()

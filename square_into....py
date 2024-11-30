@@ -1,0 +1,36 @@
+import turtle
+def draw_rectangle(widht, height, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color("purple")
+    turtle.begin_fill()
+    for _ in range(2):
+        turtle.forward(widht)
+        turtle.left(90)
+        turtle.forward(height)
+        turtle.left(90)
+    turtle.end_fill()
+def draw_circle(radius, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color("red")
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+def square(size, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color("green")
+    turtle.begin_fill()
+    for _ in range(4):
+        turtle.forward(100)
+        turtle.right(90)
+    turtle.end_fill()
+turtle.speed(0)
+draw_rectangle(-400, -150, 200, 100)
+draw_circle(70, -20, -50)
+square(30, -70, 70)
+turtle.done()

@@ -1,0 +1,56 @@
+import turtle
+def square(color, size, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.begin_fill()
+    for _ in range(4):
+        turtle.forward(size)
+        turtle.right(90)
+    turtle.end_fill()
+def triangle(color, size, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.begin_fill()
+    for _ in range(3):
+        turtle.forward(size)
+        turtle.right(120)
+    turtle.end_fill()
+def circle(color, radius, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+def pentagon(color, size, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.begin_fill()
+    for _ in range(5):
+        turtle.forward(size)
+        turtle.right(72)
+    turtle.end_fill()
+def hexagon(color, size, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.begin_fill()
+    for _ in range(6):
+        turtle.forward(size)
+        turtle.right(60)
+    turtle.end_fill()
+turtle.speed(0)
+square("green", 50, -100, 80)
+triangle("blue", 80, 100, 100)
+circle("red", 40, -50, 100)
+pentagon("indigo", 60, 100, -100)
+hexagon("purple", 70, -100, -50)
+turtle.done()
